@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>MENJUMLAHKAN 2 BILANGAN</h1>
+    <label for="bil1"></label>
+    <input
+      type="number"
+      name="bil1"
+      id="bil1"
+      placeholder="masukkan angka"
+      onchange="Bilangan()"
+    />
+    <p>+</p>
+    <label for="bil2"></label>
+    <input
+      type="number"
+      name="bil2"
+      id="bil2"
+      placeholder="masukkan angka"
+      onchange="Bilangan()"
+    />
+
+    <p><span id="hasil">Hasil Penjumlahan :</span></p>
+
+    <script>
+      function Bilangan() {
+        let bil1 = parseFloat(document.getElementById("bil1").value) || 0;
+        let bil2 = parseFloat(document.getElementById("bil2").value) || 0;
+
+        let hasil = bil1 + bil2;
+
+        document.getElementById("hasil").innerHTML = "Hasil :" + hasil;
+      }
+    </script>
+  </body>
+</html>
